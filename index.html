@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cement Wall Crack Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏗️ Cement Wall Crack Detection System</h1>
+            <p>Civil Engineering Department</p>
+        </header>
+
+        <div class="main-content">
+            <div class="camera-section">
+                <video id="video" autoplay></video>
+                <canvas id="canvas"></canvas>
+                <img id="capturedImage" style="display:none;">
+            </div>
+
+            <div class="controls">
+                <button id="startCamera" class="btn btn-primary">📷 Start Camera</button>
+                <button id="capture" class="btn btn-success" disabled>📸 Capture Image</button>
+                <button id="analyze" class="btn btn-warning" disabled>🔍 Analyze Cracks</button>
+                <button id="reset" class="btn btn-danger" disabled>🔄 Reset</button>
+            </div>
+
+            <div id="results" class="results-section">
+                <h3>Analysis Results:</h3>
+                <div id="resultContent"></div>
+                <canvas id="processedCanvas"></canvas>
+            </div>
+
+            <div class="info-section">
+                <h3>📊 Detection Statistics</h3>
+                <div id="stats">
+                    <p>Status: <span id="status">Ready</span></p>
+                    <p>Cracks Detected: <span id="crackCount">-</span></p>
+                    <p>Severity Level: <span id="severity">-</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
